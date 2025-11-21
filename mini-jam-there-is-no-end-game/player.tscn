@@ -9,8 +9,11 @@ size = Vector2(46, 50)
 
 [node name="player" type="Node2D"]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="RigidBody2D" parent="."]
+linear_damp = 3.0
+angular_damp = 5.0
 script = ExtResource("1_4flbx")
+SPEED = 1500.0
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(-9.536743e-07, 0)
@@ -22,6 +25,5 @@ shape = SubResource("RectangleShape2D_4flbx")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 zoom = Vector2(2, 1.333)
-position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 editor_draw_drag_margin = true
