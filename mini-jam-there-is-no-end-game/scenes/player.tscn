@@ -1,8 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d1poqnls7ddju"]
 
 [ext_resource type="Script" uid="uid://dt1ndu14a4s0t" path="res://character_body_2d.gd" id="1_4flbx"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_sh265"]
+[ext_resource type="Texture2D" uid="uid://b744pq2253tvl" path="res://ship_2.png" id="2_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 size = Vector2(46, 50)
@@ -16,14 +15,15 @@ script = ExtResource("1_4flbx")
 SPEED = 1500.0
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(-9.536743e-07, 0)
-scale = Vector2(46, 50)
-texture = SubResource("CanvasTexture_sh265")
+position = Vector2(0, -13)
+scale = Vector2(1.5, 1.319)
+texture = ExtResource("2_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_4flbx")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-zoom = Vector2(2, 2)
+position = Vector2(0, -4)
+zoom = Vector2(1.7, 1.7)
 position_smoothing_speed = 10.0
 editor_draw_drag_margin = true
