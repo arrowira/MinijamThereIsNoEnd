@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b744pq2253tvl" path="res://ship_2.png" id="2_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
-size = Vector2(46, 50)
+size = Vector2(38, 77)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_g2els"]
 
@@ -31,6 +31,7 @@ scale = Vector2(1.5, 1.319)
 texture = ExtResource("2_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, -13.5)
 shape = SubResource("RectangleShape2D_4flbx")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
@@ -55,3 +56,7 @@ scale_amount_curve = SubResource("Curve_qhqgy")
 hue_variation_min = 0.81
 hue_variation_max = 0.91
 hue_variation_curve = SubResource("Curve_dqkch")
+
+[node name="deathTimer" type="Timer" parent="CharacterBody2D"]
+
+[connection signal="timeout" from="CharacterBody2D/deathTimer" to="CharacterBody2D" method="_on_death_timer_timeout"]

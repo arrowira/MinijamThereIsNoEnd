@@ -8,8 +8,7 @@ var tutorial = true
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("R"):
-		if tutorial:
-			get_tree().change_scene_to_file("res://scenes/tutorial.tscn")
+		death()
 	var local_dir := Vector2.UP
 	var world_dir := local_dir.rotated(rotation)
 	if Input.is_action_pressed("turn left"):
@@ -22,6 +21,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		$thrustParticles.emitting=false
 		
-	
+func death():
+	$deathTimer.start()
 
-	
+
+func _on_death_timer_timeout() -> void:
+	if tutorial:
+		get_tree().change_scene_to_file("res://scenes/tutorial.tscn")
+		
