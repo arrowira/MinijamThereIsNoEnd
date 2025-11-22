@@ -11,7 +11,6 @@ size = Vector2(376.25, 125)
 [node name="tutorial" type="Node2D"]
 
 [node name="grid" parent="." instance=ExtResource("3_cq4me")]
-visible = false
 position = Vector2(-6374, -1429)
 scale = Vector2(2, 2)
 
