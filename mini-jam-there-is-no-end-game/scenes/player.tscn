@@ -52,7 +52,6 @@ position_smoothing_speed = 10.0
 editor_draw_drag_margin = true
 
 [node name="thrustParticles" type="CPUParticles2D" parent="CharacterBody2D"]
-visible = false
 position = Vector2(0, 24)
 scale = Vector2(1.5, 1.319)
 amount = 24
