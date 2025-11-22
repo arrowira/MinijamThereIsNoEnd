@@ -1,18 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0qgf78oll1gb"]
+[gd_scene load_steps=6 format=3 uid="uid://d0qgf78oll1gb"]
 
-[ext_resource type="FontFile" uid="uid://bkqqeiqfm31ll" path="res://msc/BoldPixels.otf" id="1_7n6eb"]
-[ext_resource type="PackedScene" uid="uid://d1poqnls7ddju" path="res://scenes/player.tscn" id="2_yb1ct"]
+[ext_resource type="FontFile" uid="uid://bkqqeiqfm31ll" path="res://msc/BoldPixels.otf" id="1_ph3nu"]
+[ext_resource type="PackedScene" uid="uid://d1poqnls7ddju" path="res://scenes/player.tscn" id="2_4kmhl"]
+[ext_resource type="PackedScene" uid="uid://3eg410hyfysc" path="res://grid.tscn" id="3_cq4me"]
+[ext_resource type="PackedScene" uid="uid://ckx2vru3xnoht" path="res://scenes/boundry.tscn" id="4_4kmhl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7n6eb"]
 size = Vector2(376.25, 125)
 
 [node name="tutorial" type="Node2D"]
 
+[node name="grid" parent="." instance=ExtResource("3_cq4me")]
+position = Vector2(-4044, -869)
+scale = Vector2(2, 2)
+
 [node name="Label" type="Label" parent="."]
 offset_right = 2441.0
 offset_bottom = 1000.0
 theme_override_colors/font_color = Color(0.31246805, 0.667056, 0.9999998, 1)
-theme_override_fonts/font = ExtResource("1_7n6eb")
+theme_override_fonts/font = ExtResource("1_ph3nu")
 theme_override_font_sizes/font_size = 1000
 text = "_L O O K_"
 
@@ -57,5 +63,49 @@ position = Vector2(3945, 510)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Label/letterK"]
 polygon = PackedVector2Array(-257, 241, -132, 240, -131, 115, -70, 115, -68, 52, -7, 54, -7, 115, 56, 115, 57, 179, 119, 180, 119, 243, 247, 241, 245, 115, 181, 117, 180, 53, 119, 54, 118, -12, 56, -11, 55, -74, 119, -74, 119, -134, 245, -136, 245, -263, 57, -263, 56, -200, -6, -197, -6, -137, -69, -136, -70, -73, -131, -73, -131, -261, -256, -261)
 
-[node name="player" parent="." instance=ExtResource("2_yb1ct")]
+[node name="player" parent="." instance=ExtResource("2_4kmhl")]
 position = Vector2(255, 501)
+
+[node name="boundry" parent="." instance=ExtResource("4_4kmhl")]
+position = Vector2(2343, 558)
+scale = Vector2(0.2, 0.1)
+
+[node name="Label2" type="RichTextLabel" parent="."]
+offset_left = 152.0
+offset_top = 630.0
+offset_right = 345.0
+offset_bottom = 729.0
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+bbcode_enabled = true
+text = "[wave]	A and D to steer, 
+W or space to accelerate"
+text_direction = 3
+
+[node name="Label4" type="RichTextLabel" parent="."]
+offset_left = 439.0
+offset_top = 164.0
+offset_right = 672.0
+offset_bottom = 263.0
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+bbcode_enabled = true
+text = "[wave]	Press R to self destruct"
+text_direction = 3
+
+[node name="Label5" type="RichTextLabel" parent="."]
+offset_left = 698.0
+offset_top = 536.0
+offset_right = 931.0
+offset_bottom = 635.0
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+bbcode_enabled = true
+text = "[wave]	Press R to self destruct"
+text_direction = 3
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 4362.0
+offset_top = 613.0
+offset_right = 4688.0
+offset_bottom = 712.0
+theme_override_fonts/font = ExtResource("1_ph3nu")
+theme_override_font_sizes/font_size = 30
+text = "Fly into the red"
