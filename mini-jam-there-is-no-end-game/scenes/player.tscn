@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d1poqnls7ddju"]
+[gd_scene load_steps=10 format=3 uid="uid://d1poqnls7ddju"]
 
 [ext_resource type="Script" uid="uid://dt1ndu14a4s0t" path="res://character_body_2d.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://b744pq2253tvl" path="res://ship_2.png" id="2_g2els"]
@@ -15,6 +15,17 @@ point_count = 3
 [sub_resource type="Curve" id="Curve_dqkch"]
 _limits = [-1.0, 1.0, 0.0, 1.0]
 _data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, -1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_qhqgy"]
+
+[sub_resource type="Curve" id="Curve_qlg0r"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.505814, 0.70786524), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_tuyoq"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.761628, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [node name="player" type="Node2D"]
@@ -41,6 +52,7 @@ position_smoothing_speed = 10.0
 editor_draw_drag_margin = true
 
 [node name="thrustParticles" type="CPUParticles2D" parent="CharacterBody2D"]
+visible = false
 position = Vector2(0, 24)
 scale = Vector2(1.5, 1.319)
 amount = 24
@@ -58,5 +70,53 @@ hue_variation_max = 0.91
 hue_variation_curve = SubResource("Curve_dqkch")
 
 [node name="deathTimer" type="Timer" parent="CharacterBody2D"]
+
+[node name="fireParts" type="CPUParticles2D" parent="CharacterBody2D"]
+emitting = false
+amount = 32
+texture = SubResource("CanvasTexture_qhqgy")
+one_shot = true
+speed_scale = 2.0
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 22.11
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 63.0
+initial_velocity_max = 63.0
+angle_min = -89.1
+angle_max = -89.1
+scale_amount_max = 10.0
+scale_amount_curve = SubResource("Curve_qlg0r")
+color = Color(1, 0.573649, 0.49370492, 1)
+hue_variation_min = -1.0
+hue_variation_max = -1.0
+hue_variation_curve = SubResource("Curve_tuyoq")
+
+[node name="debrisParts" type="CPUParticles2D" parent="CharacterBody2D"]
+emitting = false
+amount = 32
+texture = SubResource("CanvasTexture_qhqgy")
+lifetime = 1.2
+one_shot = true
+speed_scale = 1.5
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 22.11
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 63.0
+initial_velocity_max = 63.0
+angle_min = -89.1
+angle_max = -89.1
+scale_amount_min = 3.0
+scale_amount_max = 12.0
+scale_amount_curve = SubResource("Curve_qlg0r")
+color = Color(0.4752323, 0.4506352, 0.4221703, 1)
+hue_variation_min = -1.0
+hue_variation_max = -1.0
+hue_variation_curve = SubResource("Curve_tuyoq")
 
 [connection signal="timeout" from="CharacterBody2D/deathTimer" to="CharacterBody2D" method="_on_death_timer_timeout"]

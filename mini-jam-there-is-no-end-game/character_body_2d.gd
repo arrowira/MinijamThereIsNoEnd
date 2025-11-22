@@ -22,6 +22,10 @@ func _physics_process(delta: float) -> void:
 		$thrustParticles.emitting=false
 		
 func death():
+	$fireParts.emitting=true
+	$debrisParts.emitting=true
+	$Sprite2D.visible=false
+	gravity_scale=0
 	$deathTimer.start()
 
 
