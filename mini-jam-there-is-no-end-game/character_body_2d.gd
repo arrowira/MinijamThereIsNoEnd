@@ -18,6 +18,9 @@ func _physics_process(delta: float) -> void:
 		apply_torque(3000)
 	if Input.is_action_pressed("accelerate"):
 		apply_force(world_dir*SPEED)
+		$thrustParticles.emitting=true
+	else:
+		$thrustParticles.emitting=false
 		
 	
 

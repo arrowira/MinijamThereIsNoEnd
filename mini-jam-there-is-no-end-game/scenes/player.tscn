@@ -1,10 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1poqnls7ddju"]
+[gd_scene load_steps=7 format=3 uid="uid://d1poqnls7ddju"]
 
 [ext_resource type="Script" uid="uid://dt1ndu14a4s0t" path="res://character_body_2d.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://b744pq2253tvl" path="res://ship_2.png" id="2_g2els"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 size = Vector2(46, 50)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_g2els"]
+
+[sub_resource type="Curve" id="Curve_qhqgy"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.6453489, 0.8876405), 0.0, 0.0, 0, 0, Vector2(0.98837215, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_dqkch"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, -1), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="player" type="Node2D"]
 
@@ -27,3 +38,20 @@ position = Vector2(0, -4)
 zoom = Vector2(1.7, 1.7)
 position_smoothing_speed = 10.0
 editor_draw_drag_margin = true
+
+[node name="thrustParticles" type="CPUParticles2D" parent="CharacterBody2D"]
+position = Vector2(0, 24)
+scale = Vector2(1.5, 1.319)
+amount = 24
+texture = SubResource("CanvasTexture_g2els")
+lifetime = 0.4
+randomness = 0.45
+emission_shape = 3
+emission_rect_extents = Vector2(10, 1)
+angular_velocity_min = -549.28
+angular_velocity_max = 118.76
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_qhqgy")
+hue_variation_min = 0.81
+hue_variation_max = 0.91
+hue_variation_curve = SubResource("Curve_dqkch")
