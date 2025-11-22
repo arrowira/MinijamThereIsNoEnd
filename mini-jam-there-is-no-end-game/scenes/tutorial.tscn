@@ -11,12 +11,15 @@ size = Vector2(376.25, 125)
 [node name="tutorial" type="Node2D"]
 
 [node name="grid" parent="." instance=ExtResource("3_cq4me")]
-position = Vector2(-4044, -869)
+visible = false
+position = Vector2(-6374, -1429)
 scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="."]
-offset_right = 2441.0
-offset_bottom = 1000.0
+offset_left = -2368.0
+offset_top = -555.0
+offset_right = 2383.0
+offset_bottom = 445.0
 theme_override_colors/font_color = Color(0.31246805, 0.667056, 0.9999998, 1)
 theme_override_fonts/font = ExtResource("1_ph3nu")
 theme_override_font_sizes/font_size = 1000
@@ -64,17 +67,17 @@ position = Vector2(3945, 510)
 polygon = PackedVector2Array(-257, 241, -132, 240, -131, 115, -70, 115, -68, 52, -7, 54, -7, 115, 56, 115, 57, 179, 119, 180, 119, 243, 247, 241, 245, 115, 181, 117, 180, 53, 119, 54, 118, -12, 56, -11, 55, -74, 119, -74, 119, -134, 245, -136, 245, -263, 57, -263, 56, -200, -6, -197, -6, -137, -69, -136, -70, -73, -131, -73, -131, -261, -256, -261)
 
 [node name="player" parent="." instance=ExtResource("2_4kmhl")]
-position = Vector2(255, 501)
+position = Vector2(-2122, 169)
 
 [node name="boundry" parent="." instance=ExtResource("4_4kmhl")]
-position = Vector2(2343, 558)
+position = Vector2(-24.99975, 3.0000606)
 scale = Vector2(0.2, 0.1)
 
 [node name="Label2" type="RichTextLabel" parent="."]
-offset_left = 152.0
-offset_top = 630.0
-offset_right = 345.0
-offset_bottom = 729.0
+offset_left = -2216.0
+offset_top = 75.0
+offset_right = -2023.0
+offset_bottom = 174.0
 theme_override_fonts/normal_font = ExtResource("1_ph3nu")
 bbcode_enabled = true
 text = "[wave]	A and D to steer, 
@@ -82,30 +85,30 @@ W or space to accelerate"
 text_direction = 3
 
 [node name="Label4" type="RichTextLabel" parent="."]
-offset_left = 439.0
-offset_top = 164.0
-offset_right = 672.0
-offset_bottom = 263.0
+offset_left = -1929.0
+offset_top = -391.0
+offset_right = -1696.0
+offset_bottom = -292.0
 theme_override_fonts/normal_font = ExtResource("1_ph3nu")
 bbcode_enabled = true
 text = "[wave]	Press R to self destruct"
 text_direction = 3
 
 [node name="Label5" type="RichTextLabel" parent="."]
-offset_left = 698.0
-offset_top = 536.0
-offset_right = 931.0
-offset_bottom = 635.0
+offset_left = -1670.0
+offset_top = -19.0
+offset_right = -1437.0
+offset_bottom = 80.0
 theme_override_fonts/normal_font = ExtResource("1_ph3nu")
 bbcode_enabled = true
 text = "[wave]	Press R to self destruct"
 text_direction = 3
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 4362.0
-offset_top = 613.0
-offset_right = 4688.0
-offset_bottom = 712.0
+offset_left = 1994.0
+offset_top = 58.0
+offset_right = 2320.0
+offset_bottom = 157.0
 theme_override_fonts/font = ExtResource("1_ph3nu")
 theme_override_font_sizes/font_size = 30
 text = "Fly into the red"
