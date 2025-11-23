@@ -25,15 +25,16 @@ func _physics_process(delta: float) -> void:
 			$thrustParticles.emitting=false
 		
 func death():
-	dead = true
-	$fireParts.emitting=true
-	$debrisParts.emitting=true
-	$Sprite2D.visible=false
-	$thrustParticles.visible=false
-	linear_velocity = Vector2.ZERO
-	gravity_scale=0
-	$deathTimer.start()
-	$deathSFX.play()
+	if !dead:
+		dead = true
+		$fireParts.emitting=true
+		$debrisParts.emitting=true
+		$Sprite2D.visible=false
+		$thrustParticles.visible=false
+		linear_velocity = Vector2.ZERO
+		gravity_scale=0
+		$deathTimer.start()
+		$deathSFX.play()
 
 func _on_death_timer_timeout() -> void:
 	if tutorial:

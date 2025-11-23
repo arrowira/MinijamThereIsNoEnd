@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cqf0o2xs4ovfg"]
 
 [ext_resource type="Script" uid="uid://0ptpjroemn3o" path="res://star.gd" id="1_j6vao"]
-[ext_resource type="Texture2D" uid="uid://ybsr8nv80s1d" path="res://star-1.png.png" id="2_ef0hr"]
+[ext_resource type="Texture2D" uid="uid://ckjmuegj7h0vl" path="res://star-1.png (1).png" id="2_ef0hr"]
 [ext_resource type="AudioStream" uid="uid://i3m8y4af7bca" path="res://msc/pickupCoin (2).wav" id="3_ef0hr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8d8bx"]
