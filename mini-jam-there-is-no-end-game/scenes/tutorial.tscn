@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0qgf78oll1gb"]
+[gd_scene load_steps=8 format=3 uid="uid://d0qgf78oll1gb"]
 
 [ext_resource type="FontFile" uid="uid://bkqqeiqfm31ll" path="res://msc/BoldPixels.otf" id="1_ph3nu"]
 [ext_resource type="PackedScene" uid="uid://d1poqnls7ddju" path="res://scenes/player.tscn" id="2_4kmhl"]
@@ -8,6 +8,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7n6eb"]
 size = Vector2(376.25, 125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cq4me"]
+size = Vector2(549, 599)
 
 [node name="tutorial" type="Node2D"]
 
@@ -118,14 +121,15 @@ bbcode_enabled = true
 text = "[wave]	Press R to self destruct"
 text_direction = 3
 
-[node name="Label3" type="Label" parent="."]
-offset_left = 1994.0
+[node name="Label3" type="RichTextLabel" parent="."]
+offset_left = 2001.0
 offset_top = 58.0
-offset_right = 2320.0
+offset_right = 2327.0
 offset_bottom = 157.0
-theme_override_fonts/font = ExtResource("1_ph3nu")
-theme_override_font_sizes/font_size = 30
-text = "Fly into the red"
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[wave]Fly into the red"
 
 [node name="star" parent="." instance=ExtResource("5_cq4me")]
 position = Vector2(-2125, -175)
@@ -148,3 +152,10 @@ position = Vector2(1510, -248)
 
 [node name="star7" parent="." instance=ExtResource("5_cq4me")]
 position = Vector2(1780, -81)
+
+[node name="tutEnd" type="Area2D" parent="."]
+position = Vector2(2079, 114)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tutEnd"]
+position = Vector2(57.5, 19.5)
+shape = SubResource("RectangleShape2D_cq4me")
