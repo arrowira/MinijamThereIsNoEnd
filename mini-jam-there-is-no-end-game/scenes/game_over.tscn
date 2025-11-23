@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2tkafq4mrqhm"]
+[gd_scene load_steps=8 format=3 uid="uid://c2tkafq4mrqhm"]
 
 [ext_resource type="PackedScene" uid="uid://3eg410hyfysc" path="res://grid.tscn" id="1_racf3"]
+[ext_resource type="Script" uid="uid://dncnun4u2fxdy" path="res://world.gd" id="1_v3hpu"]
 [ext_resource type="FontFile" uid="uid://bkqqeiqfm31ll" path="res://msc/BoldPixels.otf" id="2_7m3ot"]
 [ext_resource type="PackedScene" uid="uid://d1poqnls7ddju" path="res://scenes/player.tscn" id="3_v3hpu"]
 [ext_resource type="PackedScene" uid="uid://ckx2vru3xnoht" path="res://scenes/boundry.tscn" id="4_irg28"]
 [ext_resource type="PackedScene" uid="uid://cqf0o2xs4ovfg" path="res://scenes/star.tscn" id="5_7m3ot"]
+[ext_resource type="Texture2D" uid="uid://ckjmuegj7h0vl" path="res://star-1.png (1).png" id="7_irg28"]
 
 [node name="gameOver" type="Node2D"]
+script = ExtResource("1_v3hpu")
 
 [node name="grid" parent="." instance=ExtResource("1_racf3")]
 position = Vector2(-6374, -1429)
@@ -117,3 +120,30 @@ position = Vector2(-2280, 124)
 
 [node name="star12" parent="." instance=ExtResource("5_7m3ot")]
 position = Vector2(-2381, 438)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 13.0
+offset_top = 19.0
+offset_right = 267.0
+offset_bottom = 59.0
+theme_override_fonts/normal_font = ExtResource("2_7m3ot")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "STARS  :"
+
+[node name="starRatio" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 146.0
+offset_top = 20.0
+offset_right = 266.0
+offset_bottom = 60.0
+theme_override_fonts/normal_font = ExtResource("2_7m3ot")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "6/7"
+
+[node name="Star1_png(1)" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(117, 35)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("7_irg28")

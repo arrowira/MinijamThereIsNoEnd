@@ -5,6 +5,10 @@ extends RigidBody2D
 const JUMP_VELOCITY = -400.0
 var tutorial = false
 var dead=false
+var stars = 0
+
+
+
 func _ready() -> void:
 	if get_parent().get_parent().name == "tutorial":
 		tutorial = true
@@ -19,11 +23,11 @@ func _physics_process(delta: float) -> void:
 	var world_left := local_left.rotated(rotation)
 	if !dead:
 		if Input.is_action_pressed("turn left"):
-			apply_torque(-10000)
-			apply_force(world_left*SPEED*0.2)
+			apply_torque(-2000)
+			apply_force(world_left*SPEED*0.05)
 		if Input.is_action_pressed("turn right"):
-			apply_torque(10000)
-			apply_force(world_left*SPEED*-0.2)
+			apply_torque(2000)
+			apply_force(world_left*SPEED*-0.05)
 		if Input.is_action_pressed("accelerate"):
 			apply_force(world_dir*SPEED)
 			$thrustParticles.emitting=true

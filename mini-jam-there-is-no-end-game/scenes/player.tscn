@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://bsr6et17x4ddb" path="res://msc/thrusterSFX.mp3" id="5_qlg0r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
-size = Vector2(38, 77)
+size = Vector2(28, 49)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_g2els"]
 
@@ -32,23 +32,25 @@ _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.761628, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
-size = Vector2(47, 82)
+size = Vector2(29, 56)
 
 [node name="player" type="Node2D"]
 
 [node name="CharacterBody2D" type="RigidBody2D" parent="."]
+mass = 0.5
+gravity_scale = 0.8
 linear_damp = 3.0
 angular_damp = 5.0
 script = ExtResource("1_4flbx")
-SPEED = 1500.0
+SPEED = 700.0
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(0, -13)
-scale = Vector2(1.5, 1.319)
+position = Vector2(0, 1)
+scale = Vector2(1, 0.879)
 texture = ExtResource("2_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, -13.5)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_4flbx")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
@@ -74,7 +76,7 @@ texture = SubResource("CanvasTexture_g2els")
 lifetime = 0.4
 randomness = 0.45
 emission_shape = 3
-emission_rect_extents = Vector2(10, 1)
+emission_rect_extents = Vector2(5, 1)
 direction = Vector2(0, 1)
 spread = 0.0
 gravity = Vector2(0, 0)
@@ -142,13 +144,13 @@ hue_variation_curve = SubResource("Curve_tuyoq")
 [node name="playerCollider" type="Area2D" parent="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/playerCollider"]
-position = Vector2(-0.5, -13)
+position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_qhqgy")
 
 [node name="playerCollider2" type="Area2D" parent="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/playerCollider2"]
-position = Vector2(-0.5, -13)
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_qhqgy")
 
 [node name="deathSFX" type="AudioStreamPlayer" parent="CharacterBody2D"]

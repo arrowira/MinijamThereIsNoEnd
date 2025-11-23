@@ -11,6 +11,9 @@ func _ready() -> void:
 	if randomized:
 		if randi_range(0,10)<5:
 			queue_free()
+		else:
+			print(get_parent().name)
+			get_parent().addStar()
 
 func _process(delta):
 	if fading:
@@ -22,6 +25,7 @@ func _process(delta):
 
 func _on_body_entered(body):
 	if body.name == "playerCollider":
+		body.get_parent().stars+=1
 		fading = true
 		set_process(true)
 		$AudioStreamPlayer.play()

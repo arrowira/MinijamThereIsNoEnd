@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0qgf78oll1gb"]
+[gd_scene load_steps=10 format=3 uid="uid://d0qgf78oll1gb"]
 
+[ext_resource type="Script" uid="uid://dncnun4u2fxdy" path="res://world.gd" id="1_6yjpi"]
 [ext_resource type="FontFile" uid="uid://bkqqeiqfm31ll" path="res://msc/BoldPixels.otf" id="1_ph3nu"]
 [ext_resource type="PackedScene" uid="uid://d1poqnls7ddju" path="res://scenes/player.tscn" id="2_4kmhl"]
 [ext_resource type="PackedScene" uid="uid://3eg410hyfysc" path="res://grid.tscn" id="3_cq4me"]
 [ext_resource type="PackedScene" uid="uid://ckx2vru3xnoht" path="res://scenes/boundry.tscn" id="4_4kmhl"]
 [ext_resource type="PackedScene" uid="uid://cqf0o2xs4ovfg" path="res://scenes/star.tscn" id="5_cq4me"]
+[ext_resource type="Texture2D" uid="uid://ckjmuegj7h0vl" path="res://star-1.png (1).png" id="7_gbqnl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7n6eb"]
 size = Vector2(376.25, 125)
@@ -13,6 +15,7 @@ size = Vector2(376.25, 125)
 size = Vector2(549, 599)
 
 [node name="tutorial" type="Node2D"]
+script = ExtResource("1_6yjpi")
 
 [node name="grid" parent="." instance=ExtResource("3_cq4me")]
 position = Vector2(-6374, -1429)
@@ -160,3 +163,30 @@ position = Vector2(2079, 114)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tutEnd"]
 position = Vector2(57.5, 19.5)
 shape = SubResource("RectangleShape2D_cq4me")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 13.0
+offset_top = 19.0
+offset_right = 267.0
+offset_bottom = 59.0
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "STARS  :"
+
+[node name="starRatio" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 146.0
+offset_top = 20.0
+offset_right = 266.0
+offset_bottom = 60.0
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "6/7"
+
+[node name="Star1_png(1)" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(117, 35)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("7_gbqnl")
