@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://q04y8wru3uot"]
+
+[ext_resource type="PackedScene" uid="uid://3eg410hyfysc" path="res://grid.tscn" id="1_vtvxa"]
+[ext_resource type="FontFile" uid="uid://bkqqeiqfm31ll" path="res://msc/BoldPixels.otf" id="2_c0sxq"]
+[ext_resource type="PackedScene" uid="uid://d1poqnls7ddju" path="res://scenes/player.tscn" id="3_nxqtb"]
+[ext_resource type="PackedScene" uid="uid://ckx2vru3xnoht" path="res://scenes/boundry.tscn" id="4_bp1wi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xoaa"]
+size = Vector2(376.25, 125)
+
+[node name="templateLVL" type="Node2D"]
+
+[node name="grid" parent="." instance=ExtResource("1_vtvxa")]
+position = Vector2(-6374, -1429)
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -2368.0
+offset_top = -555.0
+offset_right = 2383.0
+offset_bottom = 445.0
+theme_override_colors/font_color = Color(0.31246805, 0.667056, 0.9999998, 1)
+theme_override_fonts/font = ExtResource("2_c0sxq")
+theme_override_font_sizes/font_size = 1000
+text = "_L O O K_"
+
+[node name="underScore" type="StaticBody2D" parent="Label"]
+position = Vector2(257, 822)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label/underScore"]
+position = Vector2(-7.125, -7)
+shape = SubResource("RectangleShape2D_7xoaa")
+
+[node name="underScore2" type="StaticBody2D" parent="Label"]
+position = Vector2(4505, 822)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Label/underScore2"]
+position = Vector2(-7.125, -7)
+shape = SubResource("RectangleShape2D_7xoaa")
+
+[node name="letterL" type="StaticBody2D" parent="Label"]
+position = Vector2(821, 695)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Label/letterL"]
+position = Vector2(-63, -7)
+polygon = PackedVector2Array(241, 60, 241, -63, -133, -63, -134, -440, -258, -439, -259, 63)
+
+[node name="letterO" type="StaticBody2D" parent="Label"]
+position = Vector2(1884, 700)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Label/letterO"]
+position = Vector2(-63, -7)
+polygon = PackedVector2Array(-196, 60, -195, 0, -259, 0, -257, -376, -196, -377, -195, -439, 179, -438, 180, -378, 243, -377, 241, 1, 180, 1, 181, 61)
+
+[node name="letterO2" type="StaticBody2D" parent="Label"]
+position = Vector2(2945, 695)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Label/letterO2"]
+position = Vector2(-63, -7)
+polygon = PackedVector2Array(-196, 60, -195, 0, -259, 0, -257, -376, -196, -377, -195, -439, 179, -438, 180, -378, 243, -377, 241, 1, 180, 1, 181, 61)
+
+[node name="letterK" type="StaticBody2D" parent="Label"]
+position = Vector2(3945, 510)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Label/letterK"]
+polygon = PackedVector2Array(-257, 241, -132, 240, -131, 115, -70, 115, -68, 52, -7, 54, -7, 115, 56, 115, 57, 179, 119, 180, 119, 243, 247, 241, 245, 115, 181, 117, 180, 53, 119, 54, 118, -12, 56, -11, 55, -74, 119, -74, 119, -134, 245, -136, 245, -263, 57, -263, 56, -200, -6, -197, -6, -137, -69, -136, -70, -73, -131, -73, -131, -261, -256, -261)
+
+[node name="player" parent="." instance=ExtResource("3_nxqtb")]
+position = Vector2(-2122, 169)
+
+[node name="boundry" parent="." instance=ExtResource("4_bp1wi")]
+position = Vector2(-24.99975, 3.0000606)
+scale = Vector2(0.2, 0.1)
