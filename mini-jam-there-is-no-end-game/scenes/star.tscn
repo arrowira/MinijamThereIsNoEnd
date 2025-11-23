@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqf0o2xs4ovfg"]
+[gd_scene load_steps=9 format=3 uid="uid://cqf0o2xs4ovfg"]
 
 [ext_resource type="Script" uid="uid://0ptpjroemn3o" path="res://star.gd" id="1_j6vao"]
 [ext_resource type="Texture2D" uid="uid://ckjmuegj7h0vl" path="res://star-1.png (1).png" id="2_ef0hr"]
@@ -7,11 +7,77 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_8d8bx"]
 radius = 30.016663
 
+[sub_resource type="Animation" id="Animation_ef0hr"]
+resource_name = "starShake"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Star1_png:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4, 1.2),
+"transitions": PackedFloat32Array(0.45062616, 0.51763254),
+"update": 0,
+"values": [0.3351032, -0.3351032]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Star1_png:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8015018),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 5)]
+}
+
+[sub_resource type="Animation" id="Animation_8d8bx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Star1_png:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Star1_png:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8lrp4"]
+_data = {
+&"RESET": SubResource("Animation_8d8bx"),
+&"starShake": SubResource("Animation_ef0hr")
+}
+
+[sub_resource type="Curve" id="Curve_ef0hr"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.7674419, 0.9887641), 0.0, 0.0, 0, 0, Vector2(1, 0.06741583), 0.0, 0.0, 0, 0]
+point_count = 3
+
 [node name="star" type="Node2D"]
 script = ExtResource("1_j6vao")
 
 [node name="Star1_png" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.08, 0.08)
 texture = ExtResource("2_ef0hr")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -23,5 +89,26 @@ shape = SubResource("CircleShape2D_8d8bx")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ef0hr")
 volume_db = -7.633
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8lrp4")
+}
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(0, 3)
+amount = 4
+emission_shape = 1
+emission_sphere_radius = 20.0
+direction = Vector2(0, -1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 51.55
+initial_velocity_max = 51.55
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_ef0hr")
+color = Color(0.9999996, 0.99927145, 0.28899315, 1)
+hue_variation_min = -0.45
+hue_variation_max = 0.68
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_body_entered"]

@@ -7,6 +7,7 @@ var fade_timer := 0.0
 
 
 func _ready() -> void:
+	$AnimationPlayer.play("starShake")
 	if randomized:
 		if randi_range(0,10)<5:
 			queue_free()
