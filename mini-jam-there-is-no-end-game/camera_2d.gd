@@ -27,7 +27,7 @@ func lvlStart():
 	$zoomTimer.start()
 	get_parent().get_parent().get_parent().get_node("grid").visible=false
 	get_parent().get_parent().get_parent().get_node("boundry").visible=false
-	
+	get_parent().get_parent().get_parent().get_node("CanvasLayer").visible = false
 func _on_zoom_timer_timeout() -> void:
 	get_parent().get_parent().get_parent().get_node("grid").visible=true
 	
@@ -42,3 +42,4 @@ func _on_zoom_timer_timeout() -> void:
 func _on_timer_timeout() -> void:
 	get_parent().dead = false
 	get_parent().get_parent().get_parent().get_node("boundry").visible=true
+	get_parent().get_parent().get_parent().get_node("CanvasLayer").visible = true

@@ -32,7 +32,7 @@ _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.761628, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
-size = Vector2(29, 56)
+size = Vector2(30, 56)
 
 [node name="player" type="Node2D"]
 
@@ -144,7 +144,7 @@ hue_variation_curve = SubResource("Curve_tuyoq")
 [node name="playerCollider" type="Area2D" parent="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/playerCollider"]
-position = Vector2(0.5, 1)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_qhqgy")
 
 [node name="playerCollider2" type="Area2D" parent="CharacterBody2D"]
