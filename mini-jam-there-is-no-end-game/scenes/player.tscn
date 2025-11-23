@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://bsr6et17x4ddb" path="res://msc/thrusterSFX.mp3" id="5_qlg0r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
-size = Vector2(28, 49)
+size = Vector2(28, 50)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_g2els"]
 
@@ -50,7 +50,7 @@ scale = Vector2(1, 0.879)
 texture = ExtResource("2_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, 0.5)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_4flbx")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
