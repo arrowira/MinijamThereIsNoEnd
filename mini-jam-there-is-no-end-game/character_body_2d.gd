@@ -31,7 +31,7 @@ func death():
 	linear_velocity = Vector2.ZERO
 	gravity_scale=0
 	$deathTimer.start()
-
+	$deathSFX.play()
 
 func _on_death_timer_timeout() -> void:
 	if tutorial:

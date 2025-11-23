@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2tkafq4mrqhm"]
+[gd_scene load_steps=6 format=3 uid="uid://c2tkafq4mrqhm"]
 
 [ext_resource type="PackedScene" uid="uid://3eg410hyfysc" path="res://grid.tscn" id="1_racf3"]
 [ext_resource type="FontFile" uid="uid://bkqqeiqfm31ll" path="res://msc/BoldPixels.otf" id="2_7m3ot"]
 [ext_resource type="PackedScene" uid="uid://d1poqnls7ddju" path="res://scenes/player.tscn" id="3_v3hpu"]
 [ext_resource type="PackedScene" uid="uid://ckx2vru3xnoht" path="res://scenes/boundry.tscn" id="4_irg28"]
+[ext_resource type="PackedScene" uid="uid://cqf0o2xs4ovfg" path="res://scenes/star.tscn" id="5_7m3ot"]
 
 [node name="gameOver" type="Node2D"]
 
@@ -12,6 +13,7 @@ position = Vector2(-6374, -1429)
 scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="."]
+z_index = 1
 offset_left = -2461.0
 offset_top = -743.0
 offset_right = 2539.0
@@ -79,3 +81,39 @@ position = Vector2(-2206, -423)
 [node name="boundry" parent="." instance=ExtResource("4_irg28")]
 position = Vector2(-24.99975, 3.0000606)
 scale = Vector2(0.2, 0.1)
+
+[node name="star" parent="." instance=ExtResource("5_7m3ot")]
+position = Vector2(-1999, -140)
+
+[node name="star2" parent="." instance=ExtResource("5_7m3ot")]
+position = Vector2(-1088, 157)
+
+[node name="star3" parent="." instance=ExtResource("5_7m3ot")]
+position = Vector2(-1652, 261)
+
+[node name="star4" parent="." instance=ExtResource("5_7m3ot")]
+position = Vector2(-1087, -242)
+
+[node name="star5" parent="." instance=ExtResource("5_7m3ot")]
+position = Vector2(1103, 29)
+
+[node name="star6" parent="." instance=ExtResource("5_7m3ot")]
+position = Vector2(1842, 143)
+
+[node name="star7" parent="." instance=ExtResource("5_7m3ot")]
+position = Vector2(2224, 275)
+
+[node name="star8" parent="." instance=ExtResource("5_7m3ot")]
+position = Vector2(1352, 87)
+
+[node name="star9" parent="." instance=ExtResource("5_7m3ot")]
+position = Vector2(314, -331)
+
+[node name="star10" parent="." instance=ExtResource("5_7m3ot")]
+position = Vector2(-336, 141)
+
+[node name="star11" parent="." instance=ExtResource("5_7m3ot")]
+position = Vector2(-2280, 124)
+
+[node name="star12" parent="." instance=ExtResource("5_7m3ot")]
+position = Vector2(-2381, 438)

@@ -17,8 +17,8 @@ func _process(delta: float) -> void:
 		zoom.y = lerp(farZoom, 1.7, t)
 		position = lerp(anchorPos,Vector2.ZERO,t)
 		t+=0.01*zoomSpeed
-	elif t >1:
-		get_parent().dead = false
+	
+		
 	
 
 func lvlStart():
@@ -27,9 +27,20 @@ func lvlStart():
 	zoom.x = farZoom
 	zoom.y = farZoom
 	$zoomTimer.start()
+	get_parent().get_parent().get_parent().get_node("grid").visible=false
+	get_parent().get_parent().get_parent().get_node("boundry").visible=false
 	
 func _on_zoom_timer_timeout() -> void:
+	get_parent().get_parent().get_parent().get_node("grid").visible=true
+	
+	
 	playerPos = get_parent().position
 	moving=true
 	anchorPos = position
 	t=0
+	$Timer.start()
+
+
+func _on_timer_timeout() -> void:
+	get_parent().dead = false
+	get_parent().get_parent().get_parent().get_node("boundry").visible=true

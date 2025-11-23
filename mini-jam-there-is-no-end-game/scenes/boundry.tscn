@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://803p1xy5vqq2" path="res://bound-2.png.png" id="1_y724o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rkd0m"]
-size = Vector2(1282.9001, 20.400002)
+size = Vector2(1282.9001, 19.900034)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uewp8"]
 size = Vector2(25.4, 630.6001)
@@ -19,12 +19,12 @@ texture = ExtResource("1_y724o")
 position = Vector2(0, -348.49997)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bound2_png/border"]
-position = Vector2(-1.6500249, 0.20000076)
+position = Vector2(-1.6500249, -0.75)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_rkd0m")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Bound2_png/border"]
-position = Vector2(-1.6500249, 600.1)
+position = Vector2(-1.6500249, 599.3999)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_rkd0m")
 

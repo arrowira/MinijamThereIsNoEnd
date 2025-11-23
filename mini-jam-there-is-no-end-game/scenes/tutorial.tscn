@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0qgf78oll1gb"]
+[gd_scene load_steps=7 format=3 uid="uid://d0qgf78oll1gb"]
 
 [ext_resource type="FontFile" uid="uid://bkqqeiqfm31ll" path="res://msc/BoldPixels.otf" id="1_ph3nu"]
 [ext_resource type="PackedScene" uid="uid://d1poqnls7ddju" path="res://scenes/player.tscn" id="2_4kmhl"]
 [ext_resource type="PackedScene" uid="uid://3eg410hyfysc" path="res://grid.tscn" id="3_cq4me"]
 [ext_resource type="PackedScene" uid="uid://ckx2vru3xnoht" path="res://scenes/boundry.tscn" id="4_4kmhl"]
+[ext_resource type="PackedScene" uid="uid://cqf0o2xs4ovfg" path="res://scenes/star.tscn" id="5_cq4me"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7n6eb"]
 size = Vector2(376.25, 125)
@@ -83,6 +84,20 @@ text = "[wave]	A and D to steer,
 W or space to accelerate"
 text_direction = 3
 
+[node name="Label6" type="RichTextLabel" parent="."]
+offset_left = -2216.0
+offset_top = -126.0
+offset_right = -2023.0
+offset_bottom = -27.0
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+bbcode_enabled = true
+text = "[wave]	
+Your goal:
+
+To collect stars 	around the level
+"
+text_direction = 3
+
 [node name="Label4" type="RichTextLabel" parent="."]
 offset_left = -1929.0
 offset_top = -391.0
@@ -111,3 +126,25 @@ offset_bottom = 157.0
 theme_override_fonts/font = ExtResource("1_ph3nu")
 theme_override_font_sizes/font_size = 30
 text = "Fly into the red"
+
+[node name="star" parent="." instance=ExtResource("5_cq4me")]
+position = Vector2(-2125, -175)
+randomized = false
+
+[node name="star2" parent="." instance=ExtResource("5_cq4me")]
+position = Vector2(-544, 358)
+
+[node name="star3" parent="." instance=ExtResource("5_cq4me")]
+position = Vector2(522, 339)
+
+[node name="star4" parent="." instance=ExtResource("5_cq4me")]
+position = Vector2(-1666, 19)
+
+[node name="star5" parent="." instance=ExtResource("5_cq4me")]
+position = Vector2(1545, 132)
+
+[node name="star6" parent="." instance=ExtResource("5_cq4me")]
+position = Vector2(1510, -248)
+
+[node name="star7" parent="." instance=ExtResource("5_cq4me")]
+position = Vector2(1780, -81)
