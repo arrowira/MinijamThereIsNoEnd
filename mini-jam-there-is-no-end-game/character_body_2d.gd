@@ -21,12 +21,15 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_pressed("accelerate"):
 			apply_force(world_dir*SPEED)
 			$thrustParticles.emitting=true
+			$thrustSFX.volume_db=-10
 		else:
 			$thrustParticles.emitting=false
+			$thrustSFX.volume_db=-80
 		
 func death():
 	if !dead:
 		dead = true
+		$thrustSFX.volume_db=-80
 		$fireParts.emitting=true
 		$debrisParts.emitting=true
 		$Sprite2D.visible=false
