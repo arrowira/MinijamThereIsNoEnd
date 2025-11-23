@@ -45,4 +45,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		death()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	print(linear_velocity.length())
+	if linear_velocity.length()>300:
+		death()

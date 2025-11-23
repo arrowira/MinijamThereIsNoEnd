@@ -83,6 +83,7 @@ hue_variation_max = 0.91
 hue_variation_curve = SubResource("Curve_dqkch")
 
 [node name="deathTimer" type="Timer" parent="CharacterBody2D"]
+wait_time = 2.0
 
 [node name="fireParts" type="CPUParticles2D" parent="CharacterBody2D"]
 emitting = false
