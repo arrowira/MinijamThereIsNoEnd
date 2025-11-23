@@ -5,9 +5,7 @@ var farZoom = 0.2
 var moving = false
 var anchorPos = Vector2.ZERO
 var zoomSpeed = 0.5
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	lvlStart()
+
 var playerPos = Vector2.ZERO
 var t = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.

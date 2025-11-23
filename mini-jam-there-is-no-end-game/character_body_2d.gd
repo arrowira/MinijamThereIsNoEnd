@@ -8,16 +8,22 @@ var dead=false
 func _ready() -> void:
 	if get_parent().get_parent().name == "tutorial":
 		tutorial = true
+	else:
+		$Camera2D.lvlStart()
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("R"):
 		death()
 	var local_dir := Vector2.UP
+	var local_left := Vector2.LEFT
 	var world_dir := local_dir.rotated(rotation)
+	var world_left := local_left.rotated(rotation)
 	if !dead:
 		if Input.is_action_pressed("turn left"):
-			apply_torque(-5000)
+			apply_torque(-10000)
+			apply_force(world_left*SPEED*0.2)
 		if Input.is_action_pressed("turn right"):
-			apply_torque(5000)
+			apply_torque(10000)
+			apply_force(world_left*SPEED*-0.2)
 		if Input.is_action_pressed("accelerate"):
 			apply_force(world_dir*SPEED)
 			$thrustParticles.emitting=true

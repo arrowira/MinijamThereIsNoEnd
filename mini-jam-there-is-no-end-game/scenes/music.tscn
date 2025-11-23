@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://q46duo5ldfl0"]
+
+[ext_resource type="AudioStream" uid="uid://dp1v2gm74fxdj" path="res://msc/thereIsNoEnd.mp3" id="1_05ggv"]
+
+[node name="music" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_05ggv")
+volume_db = -0.44
+autoplay = true
+parameters/looping = true
