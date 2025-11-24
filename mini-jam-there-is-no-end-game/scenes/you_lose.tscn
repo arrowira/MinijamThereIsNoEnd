@@ -1,0 +1,153 @@
+[gd_scene load_steps=8 format=3 uid="uid://bjphejb14jr2q"]
+
+[ext_resource type="Script" uid="uid://dncnun4u2fxdy" path="res://world.gd" id="1_fd02c"]
+[ext_resource type="PackedScene" uid="uid://3eg410hyfysc" path="res://grid.tscn" id="2_r002i"]
+[ext_resource type="FontFile" uid="uid://bkqqeiqfm31ll" path="res://msc/BoldPixels.otf" id="3_ie4cp"]
+[ext_resource type="PackedScene" uid="uid://d1poqnls7ddju" path="res://scenes/player.tscn" id="4_6jyrg"]
+[ext_resource type="PackedScene" uid="uid://ckx2vru3xnoht" path="res://scenes/boundry.tscn" id="5_8domp"]
+[ext_resource type="PackedScene" uid="uid://cqf0o2xs4ovfg" path="res://scenes/star.tscn" id="6_bsuxv"]
+[ext_resource type="Texture2D" uid="uid://ckjmuegj7h0vl" path="res://star-1.png (1).png" id="7_v4ovr"]
+
+[node name="youLose" type="Node2D"]
+script = ExtResource("1_fd02c")
+
+[node name="grid" parent="." instance=ExtResource("2_r002i")]
+position = Vector2(-6374, -1429)
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = -2194.0
+offset_top = -743.0
+offset_right = 2806.0
+offset_bottom = 257.0
+scale = Vector2(1, 1.4800004)
+theme_override_colors/font_color = Color(0.31246805, 0.667056, 0.9999998, 1)
+theme_override_fonts/font = ExtResource("3_ie4cp")
+theme_override_font_sizes/font_size = 1000
+text = "YOU LOSE"
+
+[node name="letterO" type="StaticBody2D" parent="Label"]
+position = Vector2(3072, 694.5944)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Label/letterO"]
+position = Vector2(-63, -7)
+polygon = PackedVector2Array(-196, 60, -195, 0, -259, 0, -257, -376, -196, -377, -195, -439, 179, -438, 180, -378, 243, -377, 241, 1, 180, 1, 181, 61)
+
+[node name="letterO2" type="StaticBody2D" parent="Label"]
+position = Vector2(883, 695.27014)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Label/letterO2"]
+position = Vector2(-63, -7)
+polygon = PackedVector2Array(-196, 60, -195, 0, -259, 0, -257, -376, -196, -377, -195, -439, 179, -438, 180, -378, 243, -377, 241, 1, 180, 1, 181, 61)
+
+[node name="letterY" type="StaticBody2D" parent="Label"]
+position = Vector2(318, 695.2701)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Label/letterY"]
+position = Vector2(-63, -7)
+polygon = PackedVector2Array(58, 63.08107, 58, -126.10808, 120, -126.10808, 120, -189.62157, 183, -189.62157, 183, -251.78372, 245, -251.78372, 245, -438.94583, 120, -438.94583, 120, -313.94586, 58, -313.94586, 58, -251.10805, -68, -251.10805, -68, -313.94586, -130, -313.94586, -130, -439.62152, -255, -439.62152, -256, -251.10805, -192, -251.10805, -192, -188.27022, -130, -188.27022, -130, -126.10808, -68, -126.10808, -68, 63.08107)
+
+[node name="letterM" type="StaticBody2D" parent="Label"]
+position = Vector2(1389, 449.32422)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Label/letterM"]
+polygon = PackedVector2Array(-201, 302.02695, 174, 302.02695, 174, 239.18912, 236, 239.18912, 236, -199.99994, 111, -199.99994, 111, 176.35132, -139, 176.35132, -139, -200.67563, -264, -200.67563, -264, 239.8648, -202, 239.8648)
+
+[node name="letterL" type="StaticBody2D" parent="Label"]
+position = Vector2(2446, 449.32422)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Label/letterL"]
+polygon = PackedVector2Array(-258, 301.3513, 242, 302.02695, 242, 177.02698, -133, 177.02698, -133, -199.99994, -258, -199.99994)
+
+[node name="letterE2" type="StaticBody2D" parent="Label"]
+position = Vector2(4133, 449.99988)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Label/letterE2"]
+polygon = PackedVector2Array(241, 300.6756, 242, 175.67563, -133, 177.02698, 184, 111.48646, 181, -14.189186, -132, -13.513512, 244, -74.999985, 243, -200.67563, -259, -199.99994, -257, 301.3513)
+
+[node name="letterS" type="StaticBody2D" parent="Label"]
+position = Vector2(1945, 449.32422)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Label/letterS"]
+position = Vector2(1623, -2.0270267)
+polygon = PackedVector2Array(-255, -135.81078, -193, -135.81078, -192, -197.97292, 245, -197.97292, 245, -72.97296, -130, -72.97296, -130, -10.135136, 182, -10.135136, 182, 52.027016, 245, 52.027016, 245, 241.21616, 183, 241.89183, 183, 304.054, -255, 304.054, -255, 178.37834, 120, 178.37834, 120, 114.86484, -193, 114.86484, -193, 52.70269, -255, 52.70269)
+
+[node name="player" parent="." instance=ExtResource("4_6jyrg")]
+position = Vector2(-2145, -423)
+
+[node name="boundry" parent="." instance=ExtResource("5_8domp")]
+position = Vector2(-24.99975, 3.0000606)
+scale = Vector2(0.2, 0.1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 13.0
+offset_top = 19.0
+offset_right = 267.0
+offset_bottom = 59.0
+theme_override_fonts/normal_font = ExtResource("3_ie4cp")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "STARS  :"
+
+[node name="starRatio" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 146.0
+offset_top = 20.0
+offset_right = 266.0
+offset_bottom = 60.0
+theme_override_fonts/normal_font = ExtResource("3_ie4cp")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "6/7"
+
+[node name="Star1_png(1)" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(117, 35)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("7_v4ovr")
+
+[node name="star" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(-1942, 429)
+
+[node name="star2" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(-1158, 324)
+
+[node name="star3" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(-1047, 328)
+
+[node name="star4" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(-815, 77)
+
+[node name="star5" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(-819, -154)
+
+[node name="star6" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(1430, 137)
+
+[node name="star7" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(1291, -143)
+
+[node name="star8" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(2093, 144)
+
+[node name="star9" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(2132, -136)
+
+[node name="star10" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(175, 135)
+
+[node name="star11" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(-314, -515)
+
+[node name="star12" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(-1943, -146)
+
+[node name="star13" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(-1605, -326)
+
+[node name="star14" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(585, -326)
+
+[node name="star15" parent="." instance=ExtResource("6_bsuxv")]
+position = Vector2(1030, 321)

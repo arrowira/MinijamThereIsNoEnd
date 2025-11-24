@@ -1,0 +1,172 @@
+[gd_scene load_steps=8 format=3 uid="uid://bwd746816xy41"]
+
+[ext_resource type="Script" uid="uid://dncnun4u2fxdy" path="res://world.gd" id="1_5yhb5"]
+[ext_resource type="PackedScene" uid="uid://3eg410hyfysc" path="res://grid.tscn" id="2_4ukpv"]
+[ext_resource type="FontFile" uid="uid://bkqqeiqfm31ll" path="res://msc/BoldPixels.otf" id="3_jptgw"]
+[ext_resource type="PackedScene" uid="uid://d1poqnls7ddju" path="res://scenes/player.tscn" id="4_5ver0"]
+[ext_resource type="PackedScene" uid="uid://ckx2vru3xnoht" path="res://scenes/boundry.tscn" id="5_hvxdn"]
+[ext_resource type="Texture2D" uid="uid://ckjmuegj7h0vl" path="res://star-1.png (1).png" id="6_y1ntt"]
+[ext_resource type="PackedScene" uid="uid://cqf0o2xs4ovfg" path="res://scenes/star.tscn" id="7_hdg2y"]
+
+[node name="gameOver" type="Node2D"]
+script = ExtResource("1_5yhb5")
+
+[node name="grid" parent="." instance=ExtResource("2_4ukpv")]
+position = Vector2(-6374, -1429)
+scale = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = -2461.0
+offset_top = -743.0
+offset_right = 2539.0
+offset_bottom = 257.0
+scale = Vector2(1, 1.4800004)
+theme_override_colors/font_color = Color(0.31246805, 0.667056, 0.9999998, 1)
+theme_override_fonts/font = ExtResource("3_jptgw")
+theme_override_font_sizes/font_size = 1000
+text = "TRY AGAIN"
+
+[node name="letterG" type="StaticBody2D" parent="Label"]
+position = Vector2(3016, 449.32422)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Label/letterG"]
+polygon = PackedVector2Array(-265, -137.8378, -203, -137.8378, -203, -201.35129, 233, -200.67563, 234, -77.027016, -142, -75.67565, -141, 176.35132, 109, 176.35132, 109, 112.16214, -15, 112.16214, -16, -13.513512, 232, -12.162163, 233, 239.18912, 171, 238.51346, 172, 302.02695, -204, 302.02695, -203, 238.51346, -265, 238.51346)
+
+[node name="letterA" type="StaticBody2D" parent="Label"]
+position = Vector2(2451, 449.32422)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Label/letterA"]
+polygon = PackedVector2Array(-201, -199.99994, -200, -137.8378, -264, -137.8378, -263, 301.3513, -138, 301.3513, -137, 175.67563, 112, 175.67563, 112, 301.3513, 237, 302.02695, 237, -137.8378, 174, -137.8378, 175, -200.67563)
+
+[node name="letterA2" type="StaticBody2D" parent="Label"]
+position = Vector2(3575, 449.32422)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Label/letterA2"]
+polygon = PackedVector2Array(-201, -199.99994, -200, -137.8378, -264, -137.8378, -263, 301.3513, -138, 301.3513, -137, 175.67563, 112, 175.67563, 112, 301.3513, 237, 302.02695, 237, -137.8378, 174, -137.8378, 175, -200.67563)
+
+[node name="letterR" type="StaticBody2D" parent="Label"]
+position = Vector2(-812, 449.32422)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Label/letterR"]
+position = Vector2(1623, -2.0270267)
+polygon = PackedVector2Array(-248, 303.3783, -124, 304.054, -125, 178.37834, 127, 179.05402, 126, 304.054, 249, 304.054, 250, 114.86484, 189, 114.86484, 189, 51.35134, 251, 52.027016, 250, -135.1351, 190, -135.81078, 189, -198.64859, -249, -197.97292)
+
+[node name="letterY" type="StaticBody2D" parent="Label"]
+position = Vector2(1444, 695.2701)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Label/letterY"]
+position = Vector2(-63, -7)
+polygon = PackedVector2Array(58, 63.08107, 58, -126.10808, 120, -126.10808, 120, -189.62157, 183, -189.62157, 183, -251.78372, 245, -251.78372, 245, -438.94583, 120, -438.94583, 120, -313.94586, 58, -313.94586, 58, -251.10805, -68, -251.10805, -68, -313.94586, -130, -313.94586, -130, -439.62152, -255, -439.62152, -256, -251.10805, -192, -251.10805, -192, -188.27022, -130, -188.27022, -130, -126.10808, -68, -126.10808, -68, 63.08107)
+
+[node name="letterT" type="StaticBody2D" parent="Label"]
+position = Vector2(317, 695.2701)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Label/letterT"]
+position = Vector2(-63, -7)
+polygon = PackedVector2Array(-67, 62.405396, 59, 62.405396, 59, -313.94586, 246, -313.94586, 246, -438.94583, -254, -438.94583, -254, -313.94586, -67, -313.2702)
+
+[node name="letterI" type="StaticBody2D" parent="Label"]
+position = Vector2(4192, 695.2701)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Label/letterI"]
+position = Vector2(-63, -7)
+polygon = PackedVector2Array(-255, 62.405396, 246, 62.405396, 246, -62.594574, 58, -61.9189, 58, -313.94586, 246, -313.94586, 246, -439.62152, -254, -439.62152, -254, -313.94586, -67, -313.94586, -67, -61.9189, -254, -61.9189)
+
+[node name="letterN" type="StaticBody2D" parent="Label"]
+position = Vector2(4754, 695.2701)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Label/letterN"]
+position = Vector2(-63, -7)
+polygon = PackedVector2Array(-253, 62.405396, -128, 62.405396, -128, -188.94589, -65, -188.27022, -65, -125.4324, -4, -124.75672, -3, -62.594574, 59, -62.594574, 59, 0.9189148, 122, 0.9189148, 122, 62.405396, 247, 62.405396, 247, -439.62152, 122, -439.62152, 122, -188.27022, 59, -188.27022, 59, -251.10805, -3, -251.10805, -3, -313.94586, -65, -313.94586, -65, -376.7837, -128, -376.7837, -128, -439.62152, -253, -439.62152)
+
+[node name="player" parent="." instance=ExtResource("4_5ver0")]
+position = Vector2(-2206, -406)
+
+[node name="boundry" parent="." instance=ExtResource("5_hvxdn")]
+position = Vector2(-24.99975, 3.0000606)
+scale = Vector2(0.2, 0.1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 13.0
+offset_top = 19.0
+offset_right = 267.0
+offset_bottom = 59.0
+theme_override_fonts/normal_font = ExtResource("3_jptgw")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "STARS  :"
+
+[node name="starRatio" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 146.0
+offset_top = 20.0
+offset_right = 266.0
+offset_bottom = 60.0
+theme_override_fonts/normal_font = ExtResource("3_jptgw")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "6/7"
+
+[node name="Star1_png(1)" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(117, 35)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("6_y1ntt")
+
+[node name="star" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(-2103, -139)
+
+[node name="star2" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(-2319, -139)
+
+[node name="star3" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(-2212, 434)
+
+[node name="star4" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(-1648, 245)
+
+[node name="star5" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(-1421, 48)
+
+[node name="star6" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(-1081, -142)
+
+[node name="star7" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(-986, 137)
+
+[node name="star8" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(-856, -47)
+
+[node name="star9" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(-558, 285)
+
+[node name="star10" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(-20, 241)
+
+[node name="star11" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(199, -327)
+
+[node name="star12" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(319, -330)
+
+[node name="star13" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(602, 137)
+
+[node name="star14" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(739, -144)
+
+[node name="star15" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(1101, 254)
+
+[node name="star16" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(1794, 132)
+
+[node name="star17" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(1539, -137)
+
+[node name="star18" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(2154, 137)
+
+[node name="star19" parent="." instance=ExtResource("7_hdg2y")]
+position = Vector2(2312, -149)
