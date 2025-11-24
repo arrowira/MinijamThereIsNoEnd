@@ -91,6 +91,162 @@ text = "[wave]	A and D to steer,
 W or space to accelerate"
 text_direction = 3
 
+[node name="arrow" type="RichTextLabel" parent="."]
+offset_left = -2180.0
+offset_top = 41.000008
+offset_right = -1987.0
+offset_bottom = 140.0
+rotation = -1.3735253
+theme_override_colors/default_color = Color(0.99999994, 0.113937624, 0.15836218, 1)
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "-->"
+text_direction = 3
+
+[node name="arrow2" type="RichTextLabel" parent="."]
+offset_left = -2077.0
+offset_top = -298.00012
+offset_right = -1884.0
+offset_bottom = -199.00012
+rotation = -0.7286997
+theme_override_colors/default_color = Color(0.99999994, 0.113937624, 0.15836218, 1)
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "-->"
+text_direction = 3
+
+[node name="arrow3" type="RichTextLabel" parent="."]
+offset_left = -1538.9999
+offset_top = -442.99997
+offset_right = -1345.9999
+offset_bottom = -343.99997
+rotation = -0.0210042
+theme_override_colors/default_color = Color(0.99999994, 0.113937624, 0.15836218, 1)
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "-->"
+text_direction = 3
+
+[node name="arrow4" type="RichTextLabel" parent="."]
+offset_left = -1524.9999
+offset_top = -184.0
+offset_right = -1331.9999
+offset_bottom = -85.0
+rotation = -0.0210042
+theme_override_colors/default_color = Color(0.99999994, 0.113937624, 0.15836218, 1)
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "-->"
+text_direction = 3
+
+[node name="arrow5" type="RichTextLabel" parent="."]
+offset_left = -726.0
+offset_top = -467.0
+offset_right = -533.0
+offset_bottom = -368.0
+rotation = -0.0210042
+theme_override_colors/default_color = Color(0.99999994, 0.113937624, 0.15836218, 1)
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "-->"
+text_direction = 3
+
+[node name="arrow6" type="RichTextLabel" parent="."]
+offset_left = 68.0
+offset_top = -460.99997
+offset_right = 261.0
+offset_bottom = -361.99997
+rotation = -0.0210042
+theme_override_colors/default_color = Color(0.99999994, 0.113937624, 0.15836218, 1)
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "-->"
+text_direction = 3
+
+[node name="arrow9" type="RichTextLabel" parent="."]
+offset_left = -1078.0001
+offset_top = 322.00015
+offset_right = -885.0001
+offset_bottom = 421.00015
+rotation = 0.040243044
+theme_override_colors/default_color = Color(0.99999994, 0.113937624, 0.15836218, 1)
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "-->"
+text_direction = 3
+
+[node name="arrow10" type="RichTextLabel" parent="."]
+offset_left = -50.0
+offset_top = 319.99997
+offset_right = 143.0
+offset_bottom = 418.99997
+rotation = 0.040243044
+theme_override_colors/default_color = Color(0.99999994, 0.113937624, 0.15836218, 1)
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "-->"
+text_direction = 3
+
+[node name="arrow11" type="RichTextLabel" parent="."]
+offset_left = 992.0001
+offset_top = 325.0
+offset_right = 1185.0001
+offset_bottom = 424.0
+rotation = 0.040243044
+theme_override_colors/default_color = Color(0.99999994, 0.113937624, 0.15836218, 1)
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "-->"
+text_direction = 3
+
+[node name="arrow12" type="RichTextLabel" parent="."]
+offset_left = 1685.0
+offset_top = 316.0
+offset_right = 1878.0
+offset_bottom = 415.0
+rotation = -0.5605886
+theme_override_colors/default_color = Color(0.99999994, 0.113937624, 0.15836218, 1)
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "-->"
+text_direction = 3
+
+[node name="arrow7" type="RichTextLabel" parent="."]
+offset_left = 914.0
+offset_top = -472.0
+offset_right = 1107.0
+offset_bottom = -373.0
+rotation = -0.0210042
+theme_override_colors/default_color = Color(0.99999994, 0.113937624, 0.15836218, 1)
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "-->"
+text_direction = 3
+
+[node name="arrow8" type="RichTextLabel" parent="."]
+offset_left = 1729.0
+offset_top = -489.99997
+offset_right = 1922.0
+offset_bottom = -390.99997
+rotation = 0.59363383
+theme_override_colors/default_color = Color(0.99999994, 0.113937624, 0.15836218, 1)
+theme_override_fonts/normal_font = ExtResource("1_ph3nu")
+theme_override_font_sizes/normal_font_size = 64
+bbcode_enabled = true
+text = "-->"
+text_direction = 3
+
 [node name="Label6" type="RichTextLabel" parent="."]
 offset_left = -2216.0
 offset_top = -126.0
