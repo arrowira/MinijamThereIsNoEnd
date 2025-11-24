@@ -24,10 +24,16 @@ func _physics_process(delta: float) -> void:
 	if !dead:
 		if Input.is_action_pressed("turn left"):
 			apply_torque(-2000)
+			$rightThrustParts.emitting=true
 			apply_force(world_left*SPEED*0.05)
+		else:
+			$rightThrustParts.emitting=false
 		if Input.is_action_pressed("turn right"):
 			apply_torque(2000)
+			$leftThrustParts.emitting=true
 			apply_force(world_left*SPEED*-0.05)
+		else:
+			$leftThrustParts.emitting=false
 		if Input.is_action_pressed("accelerate"):
 			apply_force(world_dir*SPEED)
 			$thrustParticles.emitting=true

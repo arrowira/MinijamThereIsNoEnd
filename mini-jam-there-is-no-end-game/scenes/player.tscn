@@ -90,6 +90,54 @@ hue_variation_min = 0.81
 hue_variation_max = 0.91
 hue_variation_curve = SubResource("Curve_dqkch")
 
+[node name="leftThrustParts" type="CPUParticles2D" parent="CharacterBody2D"]
+position = Vector2(-13.999999, 14.000002)
+rotation = 1.5707964
+scale = Vector2(1.5, 1.319)
+emitting = false
+amount = 12
+texture = SubResource("CanvasTexture_g2els")
+lifetime = 0.2
+randomness = 0.45
+emission_shape = 3
+emission_rect_extents = Vector2(3, 1)
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 154.63
+initial_velocity_max = 154.63
+angular_velocity_min = -549.28
+angular_velocity_max = 118.76
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_qhqgy")
+hue_variation_min = 0.81
+hue_variation_max = 0.86
+hue_variation_curve = SubResource("Curve_dqkch")
+
+[node name="rightThrustParts" type="CPUParticles2D" parent="CharacterBody2D"]
+position = Vector2(14.000001, 14)
+rotation = -1.5707964
+scale = Vector2(1.5, 1.319)
+emitting = false
+amount = 12
+texture = SubResource("CanvasTexture_g2els")
+lifetime = 0.2
+randomness = 0.45
+emission_shape = 3
+emission_rect_extents = Vector2(3, 1)
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 154.63
+initial_velocity_max = 154.63
+angular_velocity_min = -549.28
+angular_velocity_max = 118.76
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_qhqgy")
+hue_variation_min = 0.8
+hue_variation_max = 0.88
+hue_variation_curve = SubResource("Curve_dqkch")
+
 [node name="deathTimer" type="Timer" parent="CharacterBody2D"]
 wait_time = 2.0
 
