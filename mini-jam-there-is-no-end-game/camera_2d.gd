@@ -11,8 +11,8 @@ var t = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if moving and t<1:
-		zoom.x = lerp(farZoom, 1.7, t)
-		zoom.y = lerp(farZoom, 1.7, t)
+		zoom.x = lerp(farZoom, 1.7, t*t*t)
+		zoom.y = lerp(farZoom, 1.7, t*t*t)
 		position = lerp(anchorPos,Vector2.ZERO,t)
 		t+=0.01*zoomSpeed
 	
