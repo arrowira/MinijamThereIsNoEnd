@@ -53,9 +53,13 @@ func _on_death_timer_timeout() -> void:
 	if tutorial:
 		get_tree().change_scene_to_file("res://scenes/tutorial.tscn")
 	else:
-		var level = randi_range(0,0)
+		var level = randi_range(0,2)
 		if level == 0:
 			get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+		if level == 1:
+			get_tree().change_scene_to_file("res://scenes/try_again.tscn")
+		if level == 2:
+			get_tree().change_scene_to_file("res://scenes/you_lose.tscn")
 		
 
 
